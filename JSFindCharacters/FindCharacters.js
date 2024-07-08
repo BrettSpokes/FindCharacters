@@ -1,3 +1,5 @@
+"use strict";
+
 /**
  LeetCode link: https://leetcode.com/problems/find-words-containing-character/submissions/
  
@@ -35,6 +37,8 @@ words[i] consists only of lowercase English letters.
 
 function findCharacters(words,x){
 
+    const result = words.reduce((acc, word, i) => word.includes(x) ? [...acc, i] : acc, []);
+    return result;
    
 }
 
